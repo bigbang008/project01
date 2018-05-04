@@ -54,10 +54,6 @@ $(window).on('keydown', function(e) {
   }
 });
 
-
-
-
-
 $(function() {
     var Accordion = function(el, multiple) {
 		this.el = el || {};
