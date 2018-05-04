@@ -1,119 +1,342 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- semantic-ui -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
-    <!-- MyCSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- JQuery -->
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- Ajax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Moment -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-    <!-- My JS -->
-    <script src="assets/javascript/app.js"></script>
-    
-</head>
-<body>
-    <div class="ui grid">
-        <div class="eight wide column">
-                <!-- Profile  -->
-                <div class="row container">
-                    <div class="ui card fluid">
-                    <div class="image">
-                        <img src="data:image/jpeg;base64,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">
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                        Kristy is an art director living in New York.
-                         </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                        <i class="user icon"></i>
-                        22 Friends
-                        </a>
-                    </div>
-                            <!-- Social Link -->
-                    <div class="row container" style="margin: 0 auto">
-                            <div class="four ui buttons">
-                            <button class="ui facebook icon button">
-                                    <i class="facebook icon"></i>
-                                </button>
-                                <button class="ui twitter icon button">
-                                    <i class="twitter icon"></i>
-                                </button>
-                                <button class="ui linkedin icon button">
-                                    <i class="linkedin icon"></i>
-                                </button>
-                                <button class="ui google plus icon button">
-                                    <i class="google plus icon"></i>
-                            </button>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+
+<script src="https://use.typekit.net/hoy3lrg.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<!-- 
+
+A concept for a chat interface. 
+
+Try writing a new message! :)
+
+
+Follow me here:
+Twitter: https://twitter.com/thatguyemil
+Codepen: https://codepen.io/emilcarlsson/
+Website: http://emilcarlsson.se/
+
+-->
+
+<div class="container">
+    <div class="row">
+        <div class="chat col-sm-9">
+            <div id="frame">
+                <div id="sidepanel">
+                    <div id="profile">
+                        <div class="wrap">
+                            <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
+                            <p>Mike Ross</p>
+                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                            <div id="status-options">
+                                <ul>
+                                    <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+                                    <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+                                    <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+                                    <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+                                </ul>
                             </div>
+                            <div id="expanded">
+                                <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="mikeross" />
+                                <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="ross81" />
+                                <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="mike.ross" />
+                            </div>
+                        </div>
                     </div>
-
+                    <div id="search">
+                        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                        <input type="text" placeholder="Search contacts..." />
+                    </div>
+                    <div id="contacts">
+                        <ul>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status online"></span>
+                                    <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Louis Litt</p>
+                                        <p class="preview">You just got LITT up, Mike.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact active">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harvey Specter</p>
+                                        <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status away"></span>
+                                    <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Rachel Zane</p>
+                                        <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status online"></span>
+                                    <img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Donna Paulsen</p>
+                                        <p class="preview">Mike, I know everything! I'm Donna..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jessica Pearson</p>
+                                        <p class="preview">Have you finished the draft on the Hinsenburg deal?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harold Gunderson</p>
+                                        <p class="preview">Thanks Mike! :)</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Daniel Hardman</p>
+                                        <p class="preview">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Katrina Bennett</p>
+                                        <p class="preview">I've sent you the files for the Garrett trial.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Charles Forstman</p>
+                                        <p class="preview">Mike, this isn't over.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jonathan Sidwell</p>
+                                        <p class="preview"><span>You:</span> That's bullshit. This deal is solid.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="bottom-bar">
+                        <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+                        <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
                     </div>
                 </div>
-
-                <!-- Icon -->
-                <div class="row container" style="margin-top: 10px">
+                <div class="content">
+                    <div class="contact-profile">
+                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                        <p>Harvey Specter</p>
+                        <div class="social-media">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                             <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <ul>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>When you're backed against the wall, break the god damn thing down.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>Excuses don't win championships.</p>
+                            </li>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>Oh yeah, did Michael Jordan tell you that?</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>No, I told him that.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>What are your choices when someone puts a gun to your head?</p>
+                            </li>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>What are you talking about? You do what they say or they shoot you.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-input">
+                        <div class="wrap">
+                        <input type="text" placeholder="Write your message..." />
+                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="profile col-sm-3">
+            <!-- <div class="container">
+                <div class="row">
+                 -->
                     
-                            <div class="ui fluid three item menu">
-                                    <a class="ui yellow item inverted menu">
-                                      <i class="gamepad icon"></i>
-                                      Games
-                                    </a>
-                                    <a class="ui blue item inverted menu">
-                                      <i class="video camera icon"></i>
-                                      Events
-                                    </a>
-                                    <a class="item">
-                                      <i class="video play icon"></i>
-                                      Videos
-                                    </a>
-                </div>
-                
-                <!-- search -->
-                <div class="row container">
-                <div class="ui fluid category search">
-                        <div class="ui icon input">
-                          <input class="prompt" type="text" placeholder="Search here...">
-                          <i class="search icon"></i>
+                    <!-- <h1>Creative User Profile <br><small>#User-Interface #User #Profile #jquery #Social #contact #accordion</small></h1> -->
+                    <!-- Contenedor -->
+                    <ul id="accordion" class="accordion">
+                    <li>
+                        <div class="col col_4 iamgurdeep-pic">
+                            <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                            <div class="edit-pic">
+                                <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="fa fa-facebook"></a>
+                                <a href="https://www.instagram.com/gurdeeposahan/" target="_blank" class="fa fa-instagram"></a>
+                                <a href="https://twitter.com/gurdeeposahan1" target="_blank" class="fa fa-twitter"></a>
+                                <a href="https://plus.google.com/u/0/105032594920038016998" target="_blank" class="fa fa-google"></a> 
+                            </div>
+                            <div class="username">
+                                <h2>Gurdeep Osahan  <small><i class="fa fa-map-marker"></i> India (Punjab)</small></h2>
+                                <p><i class="fa fa-briefcase"></i> Web Design and Development.</p>
+                                
+                                <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="btn-o"> <i class="fa fa-user-plus"></i> Add Friend </a>
+                                <a href="https://www.instagram.com/gurdeeposahan/" target="_blank"  class="btn-o"> <i class="fa fa-plus"></i> Follow </a>
+                                
+                                
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v pull-right"></span></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">Video Call <i class="fa fa-video-camera"></i></a></li>
+                                        <li><a href="#">Poke <i class="fa fa-hand-o-right"></i></a></li>
+                                        <li><a href="#">Report <i class="fa fa-bug"></i></a></li>
+                                        <li><a href="#">Block <i class="fa fa-lock"></i></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                    
                         </div>
-                        <div class="results"></div>
-                      </div>
-                </div>
-
-                <!-- result -->
-                <div class="row container" style="margin-top: 10px">
-                        <div class="ui fluid raised segment ">
-                          <a class="ui orange right ribbon label">result</a>
-                          <p>njlbhjbhjlbjbljbjhlbljbhojlbhljblhjbljhbjlhblhjbhjlbhljbjhlh</p>
-                          
-                        </div>
-                      </div>
-                </div>
-
-             
-
-                
+                    
+                    </li>
+                    <li>
+                        <div class="link"><i class="fa fa-globe"></i>About<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fa fa-calendar left-none"></i> Date of Birth : 03/09/1994</a></li>
+                            <li><a href="#">Address : INDIA,Punjab</a></li>
+                            <li><a href="mailto:gurdeepjawaddi94@gmail.com">Email : gurdeepjawaddi94@gmail.com</a></li>
+                            <li><a href="#">Phone : +91 85680-79956</a></li>
+                        </ul>
+                    </li>
+                    <li class="default open">
+                        <div class="link"><i class="fa fa-code"></i>Professional Skills<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="#"><span class="tags">Adobe Photoshop</span> <span class="tags">Corel Draw</span> <span class="tags">CSS</span> <span class="tags">Css 3</span> 
+                            <span class="tags">Graphic Design</span> <span class="tags">HTML</span> <span class="tags">HTML5</span> <span class="tags">JavaScript</span> 
+                            <span class="tags">Twitter bootstrap</span> <span class="tags">bootstrap</span> <span class="tags">User Interface Design</span> <span class="tags">Wordpress</span></li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link"><i class="fa fa-picture-o"></i>Photos <small>1,120</small><i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li class="photosgurdeep"><a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                           
+                            <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank" >15+
+                            </a>
+                                
+                            </li>
+                        </ul>
+                    </li>                
+                    <li>
+                        <div class="link"><i class="fa fa-users"></i>Friends <small>1,053</small><i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li class="photosgurdeep"><a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
+                            </a>
+                           
+                            <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank">50+
+                            </a>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            <!-- </div>       
+            </div> -->
         </div>
     </div>
+</div>
 
-
-</body>
-</html>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="app.js"></script>
+</body></html>
