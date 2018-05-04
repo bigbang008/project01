@@ -14,10 +14,15 @@ body {
   }
 
 .profile {
-    margin-bottom: -50px;
+    padding-left:0 !important;
+    float: left;
+}
+
+.chat {
+  padding-right: 0 !important;
 }
   
-  #frame {
+  /* #frame {
     width: 95%;
     min-width: 360px;
     max-width: 1000px;
@@ -25,7 +30,7 @@ body {
     min-height: 300px;
     max-height: 720px;
     background: #E6EAEA;
-  }
+  } */
   @media screen and (max-width: 360px) {
     #frame {
       width: 100%;
@@ -550,6 +555,7 @@ body {
     max-height: calc(100% - 93px);
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: white;
   }
   @media screen and (max-width: 735px) {
     #frame .content .messages {
@@ -866,23 +872,14 @@ a {
 /** =======================
  * Contenedor Principal
  ===========================*/
-h1 {
- 	color: #FFF;
- 	font-size: 24px;
- 	font-weight: 400;
- 	text-align: center;
- 	margin-top: 40px;
- }
 
-h1 a {
- 	color: #c12c42;
- 	font-size: 16px;
- }
 
  .accordion {
- 	width: 100%;
+  width: 100% !important;
+  height: 1600px !important;
+   
  	max-width: 360px;
- 	margin: 30px auto 20px;
+ 	/* margin: 30px auto 20px; */
  	background: #FFF;
  	-webkit-border-radius: 4px;
  	-moz-border-radius: 4px;
