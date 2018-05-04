@@ -876,7 +876,7 @@ a {
 
  .accordion {
   width: 100% !important;
-  height: 1600px !important;
+  height: 100% !important;
    
  	max-width: 360px;
  	/* margin: 30px auto 20px; */
@@ -964,11 +964,6 @@ a {
  	background: #b63b4d;
  	color: #FFF;
  }
-
-
-
-
-
 
 
 
