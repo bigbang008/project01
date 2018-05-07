@@ -1,19 +1,34 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 
-<!DOCTYPE html><html class=''>
-<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html class=''>
 
-<script src="https://use.typekit.net/hoy3lrg.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+<head>
+    <script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+    <script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+    <script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"
+    />
+    <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
+        color="#111" />
+    <link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-<!-- 
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- 
 
 A concept for a chat interface. 
 
@@ -27,212 +42,243 @@ Website: http://emilcarlsson.se/
 
 -->
 
-<div class="container">
-    <div class="row">
-        <div class="chat col-sm-9">
-            <div id="frame">
-                <div id="sidepanel">
-                    <div id="profile">
-                        <div class="wrap">
-                            <img id="profile-img" src="assets/media/male_headshot.jpg" class="online" alt="" />
-                            <p>John Smith</p>
-                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
-                            <div id="status-options">
-                                <ul>
-                                    <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
-                                    <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
-                                    <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
-                                    <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
-                                </ul>
-                            </div>
-                            <div id="expanded">
-                                <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
-                                <input name="twitter" type="text" value="mikeross" />
-                                <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
-                                <input name="twitter" type="text" value="ross81" />
-                                <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
-                                <input name="twitter" type="text" value="mike.ross" />
+    <div class="container">
+        <div class="row">
+            <div class="chat col-sm-9">
+                <div id="frame">
+                    <div id="sidepanel">
+                        <div id="profile">
+                            <div class="wrap">
+                                <img id="profile-img" src="assets/media/male_headshot.jpg" class="online" alt="" />
+                                <p>John Smith</p>
+                                <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                                <div id="status-options">
+                                    <ul>
+                                        <li id="status-online" class="active">
+                                            <span class="status-circle"></span>
+                                            <p>Online</p>
+                                        </li>
+                                        <li id="status-away">
+                                            <span class="status-circle"></span>
+                                            <p>Away</p>
+                                        </li>
+                                        <li id="status-busy">
+                                            <span class="status-circle"></span>
+                                            <p>Busy</p>
+                                        </li>
+                                        <li id="status-offline">
+                                            <span class="status-circle"></span>
+                                            <p>Offline</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="expanded">
+                                    <label for="twitter">
+                                        <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+                                    </label>
+                                    <input name="twitter" type="text" value="mikeross" />
+                                    <label for="twitter">
+                                        <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+                                    </label>
+                                    <input name="twitter" type="text" value="ross81" />
+                                    <label for="twitter">
+                                        <i class="fa fa-instagram fa-fw" aria-hidden="true"></i>
+                                    </label>
+                                    <input name="twitter" type="text" value="mike.ross" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="search">
-                        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-                        <input type="text" placeholder="Search contacts..." />
-                    </div>
-                    <div id="contacts">
-                        <ul>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status online"></span>
-                                    <img src="assets/media/female_headshot.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Daughter - Jane </p>
-                                        <p class="preview">OMGGGGGG HAVE YOU SEEN MY DOG IN HIS HALLOWEEN COSTUME????</p>
+                        <div id="search">
+                            <label for="">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </label>
+                            <input type="text" placeholder="Search contacts..." />
+                        </div>
+                        <div id="contacts">
+                            <ul>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status online"></span>
+                                        <img src="assets/media/female_headshot.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Daughter - Jane </p>
+                                            <p class="preview">OMGGGGGG HAVE YOU SEEN MY DOG IN HIS HALLOWEEN COSTUME????</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="contact active">
-                                <div class="wrap">
-                                    <span class="contact-status busy"></span>
+                                </li>
+                                <li class="contact active">
+                                    <div class="wrap">
+                                        <span class="contact-status busy"></span>
+                                        <img src="assets/media/male_headshot_2.jpeg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Son - Johnny</p>
+                                            <p class="preview">Nothing, just chillin w/ Uncle Jim</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status away"></span>
+                                        <img src="assets/media/female_headshot_2.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Wife - Jill</p>
+                                            <p class="preview">Milk. Get Milk. We need Milk. Get some Milk. Because we are in need... of Milk.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status online"></span>
+                                        <img src="assets/media/male_headshot_3.jpeg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Cousin - Jack</p>
+                                            <p class="preview">Have you seen my beer? Or like...no...???</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status busy"></span>
+                                        <img src="assets/media/female_headshot_3.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Mother - Janine</p>
+                                            <p class="preview">hEl0 s000n, I b0ut AN iPhone!! ThiZ iZ y0uaRe m0tHeR FYI</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status"></span>
+                                        <img src="assets/media/male_headshot_4.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Brother - James</p>
+                                            <p class="preview">Jhonnn c'mon, it was a practical joke!!! How was I supposed to know your boss
+                                                would end up...</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status"></span>
+                                        <img src="assets/media/female_headshot_4.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Cousin - Jamie</p>
+                                            <p class="preview">U think Jack's been drinking again?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status busy"></span>
+                                        <img src="assets/media/male_headshot_5.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Uncle - Jimmy</p>
+                                            <p class="preview">If you've got a shovel and XL garbage bags by chance, that'd be great!! Thanks
+                                                Nephew!!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status"></span>
+                                        <img src="assets/media/female_headshot_5.png" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Sister - Jackie</p>
+                                            <p class="preview">Mom said I'm the favorite!! SO SUCK IT!!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contact">
+                                    <div class="wrap">
+                                        <span class="contact-status"></span>
+                                        <img src="assets/media/male_headshot_6.jpg" alt="" />
+                                        <div class="meta">
+                                            <p class="name">Your Brother - Joe</p>
+                                            <p class="preview">Block Jackie!!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="bottom-bar">
+                            <button id="addcontact">
+                                <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
+                                <span>Add contact</span>
+                            </button>
+                            <button id="settings">
+                                <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
+                                <span>Settings</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="contact-profile">
+                            <img src="assets/media/male_headshot_2.jpeg" alt="" />
+                            <p>Your Son - Johnny Smith</p>
+                            <div class="social-media">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <ul>
+                                <li class="sent">
+                                    <img src="assets/media/male_headshot.jpg" alt="" />
+                                    <p>Please stop hanging out with your Uncle Jimmy, he isn't a good influence.</p>
+                                </li>
+                                <li class="replies">
                                     <img src="assets/media/male_headshot_2.jpeg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Son - Johnny</p>
-                                        <p class="preview">Nothing, just chillin w/ Uncle Jim</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status away"></span>
-                                    <img src="assets/media/female_headshot_2.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Wife - Jill</p>
-                                        <p class="preview">Milk. Get Milk. We need Milk. Get some Milk. Because we are in need... of Milk.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status online"></span>
-                                    <img src="assets/media/male_headshot_3.jpeg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Cousin - Jack</p>
-                                        <p class="preview">Have you seen my beer? Or like...no...???</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status busy"></span>
-                                    <img src="assets/media/female_headshot_3.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Mother - Janine</p>
-                                        <p class="preview">hEl0 s000n, I b0ut AN iPhone!! ThiZ iZ y0uaRe m0tHeR FYI</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status"></span>
-                                    <img src="assets/media/male_headshot_4.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Brother - James</p>
-                                        <p class="preview">Jhonnn c'mon, it was a practical joke!!! How was I supposed to know your boss would end up...</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status"></span>
-                                    <img src="assets/media/female_headshot_4.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Cousin - Jamie</p>
-                                        <p class="preview">U think Jack's been drinking again?</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status busy"></span>
-                                    <img src="assets/media/male_headshot_5.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Uncle - Jimmy</p>
-                                        <p class="preview">If you've got a shovel and XL garbage bags by chance, that'd be great!! Thanks Nephew!!</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status"></span>
-                                    <img src="assets/media/female_headshot_5.png" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Sister - Jackie</p>
-                                        <p class="preview">Mom said I'm the favorite!! SO SUCK IT!!</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="contact">
-                                <div class="wrap">
-                                    <span class="contact-status"></span>
-                                    <img src="assets/media/male_headshot_6.jpg" alt="" />
-                                    <div class="meta">
-                                        <p class="name">Your Brother - Joe</p>
-                                        <p class="preview">Block Jackie!!</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="bottom-bar">
-                        <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
-                        <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="contact-profile">
-                        <img src="assets/media/male_headshot_2.jpeg" alt="" />
-                        <p>Your Son - Johnny Smith</p>
-                        <div class="social-media">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                             <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <p>No trust me</p>
+                                </li>
+                                <li class="sent">
+                                    <img src="assets/media/male_headshot.jpg" alt="" />
+                                    <p>I'm not asking I'm telling you</p>
+                                </li>
+                                <li class="replies">
+                                    <img src="assets/media/male_headshot_2.jpeg" alt="" />
+                                    <p>Why not?</p>
+                                </li>
+                                <li class="sent">
+                                    <img src="assets/media/male_headshot.jpg" alt="" />
+                                    <p>He's...um...well just don't</p>
+                                </li>
+                                <li class="replies">
+                                    <img src="assets/media/male_headshot_2.jpeg" alt="" />
+                                    <p>K</p>
+                                </li>
+                                <li class="sent">
+                                    <img src="assets/media/male_headshot.jpg" alt="" />
+                                    <p>Good. So what're u up to?</p>
+                                </li>
+                                <li class="replies">
+                                    <img src="assets/media/male_headshot_2.jpeg" alt="" />
+                                    <p>Nothing, just chillin w/ Uncle Jimmy</p>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="messages">
-                        <ul>
-                            <li class="sent">
-                                <img src="assets/media/male_headshot.jpg" alt="" />
-                                <p>Please stop hanging out with your Uncle Jimmy, he isn't a good influence.</p>
-                            </li>
-                            <li class="replies">
-                                <img src="assets/media/male_headshot_2.jpeg"  alt="" />
-                                <p>No trust me</p>
-                            </li>
-                            <li class="sent">
-                                <img src="assets/media/male_headshot.jpg"  alt="" />
-                                <p>I'm not asking I'm telling you</p>
-                            </li>
-                            <li class="replies">
-                                <img src="assets/media/male_headshot_2.jpeg"  alt="" />
-                                <p>Why not?</p>
-                            </li>
-                            <li class="sent">
-                                <img src="assets/media/male_headshot.jpg" alt="" />
-                                <p>He's...um...well just don't</p>
-                            </li>
-                            <li class="replies">
-                                <img src="assets/media/male_headshot_2.jpeg" alt="" />
-                                <p>K</p>
-                            </li>
-                            <li class="sent">
-                                <img src="assets/media/male_headshot.jpg" alt="" />
-                                <p>Good. So what're u up to?</p>
-                            </li>
-                            <li class="replies">
-                                <img src="assets/media/male_headshot_2.jpeg" alt="" />
-                                <p>Nothing, just chillin w/ Uncle Jimmy</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="message-input">
-                        <div class="wrap">
-                        <input type="text" placeholder="Write your message..." />
-                        <i class="fa fa-ellipsis-h attachment" aria-hidden="true"></i>
-                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        <div class="message-input">
+                            <div class="wrap">
+                                <input type="text" placeholder="Write your message..." />
+                                <i class="fa fa-ellipsis-h attachment" aria-hidden="true"></i>
+                                <button class="submit">
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            
-        </div>
-        <div class="profile col-sm-3">
-            <!-- <div class="container">
+            <div class="profile col-sm-3">
+                <!-- <div class="container">
                 <div class="row">
                  -->
-                    
-                    <!-- <h1>Creative User Profile <br><small>#User-Interface #User #Profile #jquery #Social #contact #accordion</small></h1> -->
-                    <!-- Contenedor -->
-                    <ul id="accordion" class="accordion">
+
+                <!-- <h1>Creative User Profile <br><small>#User-Interface #User #Profile #jquery #Social #contact #accordion</small></h1> -->
+                <!-- Contenedor -->
+                <ul id="accordion" class="accordion">
                     <li>
                         <div class="col col_4 iamgurdeep-pic">
                             <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="assets/media/male_headshot_2.jpeg">
@@ -240,103 +286,181 @@ Website: http://emilcarlsson.se/
                                 <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="fa fa-facebook"></a>
                                 <a href="https://www.instagram.com/gurdeeposahan/" target="_blank" class="fa fa-instagram"></a>
                                 <a href="https://twitter.com/gurdeeposahan1" target="_blank" class="fa fa-twitter"></a>
-                                <a href="https://plus.google.com/u/0/105032594920038016998" target="_blank" class="fa fa-google"></a> 
+                                <a href="https://plus.google.com/u/0/105032594920038016998" target="_blank" class="fa fa-google"></a>
                             </div>
                             <div class="username">
-                                <h2>Johnny SmithLL  <small><i class="fa fa-map-marker"></i> Basement (Yours)</small></h2>
-                                <p><i class="fa fa-briefcase"></i> Asking Dad For Money</p>
-                                
-                                <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="btn-o"> <i class="fa fa-user-plus"></i> Add Friend </a>
-                                <a href="https://www.instagram.com/gurdeeposahan/" target="_blank"  class="btn-o"> <i class="fa fa-plus"></i> Follow </a>
-                                
-                                
+                                <h2>Johnny SmithLL
+                                    <small>
+                                        <i class="fa fa-map-marker"></i> Basement (Yours)</small>
+                                </h2>
+                                <p>
+                                    <i class="fa fa-briefcase"></i> Asking Dad For Money</p>
+
+                                <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="btn-o">
+                                    <i class="fa fa-user-plus"></i> Add Friend </a>
+                                <a href="https://www.instagram.com/gurdeeposahan/" target="_blank" class="btn-o">
+                                    <i class="fa fa-plus"></i> Follow </a>
+
+
                                 <ul class="nav navbar-nav">
                                     <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v pull-right"></span></a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Video Call <i class="fa fa-video-camera"></i></a></li>
-                                        <li><a href="#">Poke <i class="fa fa-hand-o-right"></i></a></li>
-                                        <li><a href="#">Report <i class="fa fa-bug"></i></a></li>
-                                        <li><a href="#">Block <i class="fa fa-lock"></i></a></li>
-                                    </ul>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="fa fa-ellipsis-v pull-right"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="#">Video Call
+                                                    <i class="fa fa-video-camera"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Poke
+                                                    <i class="fa fa-hand-o-right"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Report
+                                                    <i class="fa fa-bug"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Block
+                                                    <i class="fa fa-lock"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            
+
                             </div>
-                    
+
                         </div>
-                    
+
                     </li>
                     <li>
-                        <div class="link"><i class="fa fa-globe"></i>About<i class="fa fa-chevron-down"></i></div>
+                        <div class="link">
+                            <i class="fa fa-globe"></i>About
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
                         <ul class="submenu">
-                            <li><a href="#"><i class="fa fa-calendar left-none"></i> Date of Birth : 03/09/1994</a></li>
-                            <li><a href="#">Address : INDIA,Punjab</a></li>
-                            <li><a href="mailto:gurdeepjawaddi94@gmail.com">Email : gurdeepjawaddi94@gmail.com</a></li>
-                            <li><a href="#">Phone : +91 85680-79956</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-calendar left-none"></i> Date of Birth : 03/09/1994</a>
+                            </li>
+                            <li>
+                                <a href="#">Address : INDIA,Punjab</a>
+                            </li>
+                            <li>
+                                <a href="mailto:gurdeepjawaddi94@gmail.com">Email : gurdeepjawaddi94@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="#">Phone : +91 85680-79956</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="default open">
-                        <div class="link"><i class="fa fa-code"></i>Professional Skills<i class="fa fa-chevron-down"></i></div>
+                        <div class="link">
+                            <i class="fa fa-code"></i>Professional Skills
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
                         <ul class="submenu">
-                            <li><a href="#"><span class="tags">Adobe Photoshop</span> <span class="tags">Corel Draw</span> <span class="tags">CSS</span> <span class="tags">Css 3</span> 
-                            <span class="tags">Graphic Design</span> <span class="tags">HTML</span> <span class="tags">HTML5</span> <span class="tags">JavaScript</span> 
-                            <span class="tags">Twitter bootstrap</span> <span class="tags">bootstrap</span> <span class="tags">User Interface Design</span> <span class="tags">Wordpress</span></li></a>
+                            <li>
+                                <a href="#">
+                                    <span class="tags">Adobe Photoshop</span>
+                                    <span class="tags">Corel Draw</span>
+                                    <span class="tags">CSS</span>
+                                    <span class="tags">Css 3</span>
+                                    <span class="tags">Graphic Design</span>
+                                    <span class="tags">HTML</span>
+                                    <span class="tags">HTML5</span>
+                                    <span class="tags">JavaScript</span>
+                                    <span class="tags">Twitter bootstrap</span>
+                                    <span class="tags">bootstrap</span>
+                                    <span class="tags">User Interface Design</span>
+                                    <span class="tags">Wordpress</span>
+                            </li>
+                            </a>
                         </ul>
                     </li>
                     <li>
-                        <div class="link"><i class="fa fa-picture-o"></i>Photos <small>1,120</small><i class="fa fa-chevron-down"></i></div>
+                        <div class="link">
+                            <i class="fa fa-picture-o"></i>Photos
+                            <small>1,120</small>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
                         <ul class="submenu">
-                            <li class="photosgurdeep"><a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                           
-                            <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank" >15+
-                            </a>
-                                
+                            <li class="photosgurdeep">
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+
+                                <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank">15+
+                                </a>
+
                             </li>
                         </ul>
-                    </li>                
+                    </li>
                     <li>
-                        <div class="link"><i class="fa fa-users"></i>Friends <small>1,053</small><i class="fa fa-chevron-down"></i></div>
+                        <div class="link">
+                            <i class="fa fa-users"></i>Friends
+                            <small>1,053</small>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
                         <ul class="submenu">
-                            <li class="photosgurdeep"><a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                            <a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">                 
-                            </a>
-                           
-                            <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank">50+
-                            </a>
-                                
+                            <li class="photosgurdeep">
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+                                <a href="#">
+                                    <img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
+                                </a>
+
+                                <a class="view-all" href="https://web.facebook.com/iamgurdeeposahan" target="_blank">50+
+                                </a>
+
                             </li>
                         </ul>
                     </li>
                 </ul>
-            <!-- </div>       
+                <!-- </div>       
             </div> -->
+            </div>
         </div>
     </div>
-</div>
 
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src="assets/javascript/app.js"></script>
-</body></html>
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="assets/javascript/app.js"></script>
+    </body>
+
+</html>

@@ -22,15 +22,6 @@ body {
   padding-right: 0 !important;
 }
   
-  /* #frame {
-    width: 95%;
-    min-width: 360px;
-    max-width: 1000px;
-    height: 92vh;
-    min-height: 300px;
-    max-height: 720px;
-    background: #E6EAEA;
-  } */
   @media screen and (max-width: 360px) {
     #frame {
       width: 100%;
@@ -681,15 +672,9 @@ body {
   }
 
   /*new css addition*/
-  @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-/* * {
-    margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-} */
+
 
 body {
 	background: #2d2c41;
@@ -881,7 +866,6 @@ a {
   height: 100% !important;
    
  	max-width: 360px;
- 	/* margin: 30px auto 20px; */
  	background: #2c3e50;
  	-webkit-border-radius: 4px;
  	-moz-border-radius: 4px;
@@ -924,13 +908,6 @@ a {
 	font-size: 16px;
 }
 
-/* .accordion li.open .link {
-	color: #b63b4d;
-}
-
-.accordion li.open i {
-	color: #b63b4d;
-} */
 .accordion li.open i.fa-chevron-down {
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
@@ -968,16 +945,6 @@ a {
   background: #435f7a;
   color: #FFFFFF;
  }
-
-
-
-
-
-
-
-
-
-
 
 .nav.navbar-nav .dropdown-toggle {
     padding: 0 !important;

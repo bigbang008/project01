@@ -1,23 +1,23 @@
 $(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
-$("#profile-img").click(function() {
+$("#profile-img").click(function () {
 	$("#status-options").toggleClass("active");
 });
 
-$(".expand-button").click(function() {
-  $("#profile").toggleClass("expanded");
+$(".expand-button").click(function () {
+	$("#profile").toggleClass("expanded");
 	$("#contacts").toggleClass("expanded");
 });
 
-$("#status-options ul li").click(function() {
+$("#status-options ul li").click(function () {
 	$("#profile-img").removeClass();
 	$("#status-online").removeClass("active");
 	$("#status-away").removeClass("active");
 	$("#status-busy").removeClass("active");
 	$("#status-offline").removeClass("active");
 	$(this).addClass("active");
-	
-	if($("#status-online").hasClass("active")) {
+
+	if ($("#status-online").hasClass("active")) {
 		$("#profile-img").addClass("online");
 	} else if ($("#status-away").hasClass("active")) {
 		$("#profile-img").addClass("away");
@@ -28,13 +28,13 @@ $("#status-options ul li").click(function() {
 	} else {
 		$("#profile-img").removeClass();
 	};
-	
+
 	$("#status-options").removeClass("active");
 });
 
 function newMessage() {
 	message = $(".message-input input").val();
-	if($.trim(message) == '') {
+	if ($.trim(message) == '') {
 		return false;
 	}
 	$('<li class="sent"><img src="assets/media/male_headshot.jpg" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
@@ -43,31 +43,31 @@ function newMessage() {
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 };
 
-$('.submit').click(function() {
-  newMessage();
+$('.submit').click(function () {
+	newMessage();
 });
 
-$(window).on('keydown', function(e) {
-  if (e.which == 13) {
-    newMessage();
-    return false;
-  }
+$(window).on('keydown', function (e) {
+	if (e.which == 13) {
+		newMessage();
+		return false;
+	}
 });
 
-$(function() {
-    var Accordion = function(el, multiple) {
+$(function () {
+	var Accordion = function (el, multiple) {
 		this.el = el || {};
 		this.multiple = multiple || false;
 
 		// Variables privadas
 		var links = this.el.find('.link');
 		// Evento
-		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+		links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
 	}
 
-	Accordion.prototype.dropdown = function(e) {
+	Accordion.prototype.dropdown = function (e) {
 		var $el = e.data.el;
-			$this = $(this),
+		$this = $(this),
 			$next = $this.next();
 
 		$next.slideToggle();
@@ -76,7 +76,7 @@ $(function() {
 		if (!e.data.multiple) {
 			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
 		};
-	}	
+	}
 
 	var accordion = new Accordion($('#accordion'), false);
 });
