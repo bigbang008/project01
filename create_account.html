@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create A Profile</title>
     <!-- Bootstrap -->
-    
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -19,6 +19,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- MyCSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/create_account.css">
     <!-- JQuery -->
@@ -37,81 +39,90 @@
 <body>
 
 
-<div class="wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4 profileCreator">
-                <img src="assets/media/profile_placeholder.png" alt="" class="profilePlaceholderImage">
-                <br>
-                <br>
-                <button type="button"><div class="glyphicon glyphicon-camera"></div> Upload Image</button>
-                <label>Upload A Profile Picture</label>
-                <br>
-                <br>
-                <label><div class="glyphicon glyphicon-user"></div> Your Info</label>
-                <br>
-                <label><div class="glyphicon glyphicon-scale"></div> Birthday</label>
-                <br>
-                <div class="row">
-                    <div class="col-sm-2">
-                        <input type="text" placeholder="01">
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 profileCreator">
+                    <img src="assets/media/profile_placeholder.png" alt="" class="profilePlaceholderImage">
+                    <br>
+                    <br>
+                    <button type="button" class="animated flip">
+                        <div class="glyphicon glyphicon-camera"></div> Upload Image</button>
+                    <label>Upload A Profile Picture</label>
+                    <br>
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-user"></div> Your Info</label>
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-scale"></div> Birthday</label>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input type="text" placeholder="01">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" placeholder="01">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="2018">
+                        </div>
                     </div>
-                    <div class="col-sm-2">
-                        <input type="text" placeholder="01">
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="text" placeholder="2018">
-                    </div>
+                    <label>
+                        <div class="glyphicon glyphicon-map-marker"></div> Current City</label>
+                    <br>
+                    <input type="text" placeholder="Chicago">
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-grain"></div> Favorite Food</label>
+                    <br>
+                    <input type="text" placeholder="Pasta Alfredo">
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-map-marker"></div> Dream Destination</label>
+                    <br>
+                    <input type="text" placeholder="Zhangye Danxia, China">
+                    <br>
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-bullhorn"></div> Announcements</label>
+                    <br>
+                    <input type="text" placeholder="Announcement">
+                    <br>
+                    <input type="text" placeholder="Announcement">
+                    <br>
+                    <input type="text" placeholder="Announcement">
+                    <br>
+                    <br>
+                    <label>Upload Photos</label>
+                    <br>
+                    <button type="button" class="animated rotateIn">
+                        <div class="glyphicon glyphicon-picture"></div> Upload Image</button>
+                    <br>
+                    <br>
+                    <label>
+                        <div class="glyphicon glyphicon-user"></div>
+                        <div class="glyphicon glyphicon-user"></div>
+                        <div class="glyphicon glyphicon-user"></div>
+                        Immediate Family
+                    </label>
+                    <br>
+                    <input type="text" placeholder="Spouse">
+                    <br>
+                    <input type="text" placeholder="Parents">
+                    <br>
+                    <input type="text" placeholder="Kids">
+                    <button class="animated fadeInUpBig">+</button>
+                    <br>
+                    <br>
+                    <button class="submitBtn animated lightSpeedIn" type="submit">
+                        <div class="glyphicon glyphicon-ok"></div> Submit</button>
                 </div>
-                <label><div class="glyphicon glyphicon-map-marker"></div> Current City</label>
-                <br>
-                <input type="text" placeholder="Chicago">
-                <br>
-                <label><div class="glyphicon glyphicon-grain"></div> Favorite Food</label>
-                <br>
-                <input type="text" placeholder="Pasta Alfredo">
-                <br>
-                <label><div class="glyphicon glyphicon-map-marker"></div> Dream Destination</label>
-                <br>
-                <input type="text" placeholder="Zhangye Danxia, China">
-                <br>
-                <br>
-                <label><div class="glyphicon glyphicon-bullhorn"></div> Announcements</label>
-                <br>
-                <input type="text" placeholder="Announcement">
-                <br>
-                <input type="text" placeholder="Announcement">
-                <br>
-                <input type="text" placeholder="Announcement">
-                <br>
-                <br>
-                <label>Upload Photos</label>
-                <br>
-                <button type="button"><div class="glyphicon glyphicon-picture"></div> Upload Image</button>
-                <br>
-                <br>
-                <label>
-                    <div class="glyphicon glyphicon-user"></div>
-                    <div class="glyphicon glyphicon-user"></div>
-                    <div class="glyphicon glyphicon-user"></div>
-                    Immediate Family
-                </label>
-                <br>
-                <input type="text" placeholder="Spouse">
-                <br>
-                <input type="text" placeholder="Parents">
-                <br>
-                <input type="text" placeholder="Kids">
-                <button>+</button>
-                <br>
-                <br>
-                <button class="submitBtn" type="submit"><div class="glyphicon glyphicon-ok"></div> Submit</button>
+                <div class="col-sm-4"></div>
             </div>
-            <div class="col-sm-4"></div>
         </div>
     </div>
-</div>    
 
 </body>
 
