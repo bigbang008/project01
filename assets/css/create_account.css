@@ -46,3 +46,13 @@ button{
 .submitBtn{
   margin-bottom: 15px;
 }
+
+.dayMonth{
+  width: 40px;
+  padding: 0 !important;
+}
+
+.year{
+  width: 50px !important;
+  padding: 0 !important;
+}
