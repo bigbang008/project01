@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create A Profile</title>
+    <!-- Bootstrap -->
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- MyCSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/create_account.css">
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <!-- My JS -->
+    <script src="assets/javascript/create_account.js"></script>
+</head>
+
+<body>
+
+
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 profileCreator">
+                <img src="assets/media/profile_placeholder.png" alt="" class="profilePlaceholderImage">
+                <br>
+                <br>
+                <button type="button"><div class="glyphicon glyphicon-camera"></div> Upload Image</button>
+                <label>Upload A Profile Picture</label>
+                <br>
+                <br>
+                <label><div class="glyphicon glyphicon-user"></div> Your Info</label>
+                <br>
+                <label><div class="glyphicon glyphicon-ok"></div> Birthday</label>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <input type="text" placeholder="01">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" placeholder="01">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="2018">
+                    </div>
+                </div>
+                <label><div class="glyphicon glyphicon-map-marker"></div> Current City</label>
+                <br>
+                <input type="text" placeholder="Chicago">
+                <br>
+                <label><div class="glyphicon glyphicon-grain"></div> Favorite Food</label>
+                <br>
+                <input type="text" placeholder="Pasta Alfredo">
+                <br>
+                <label><div class="glyphicon glyphicon-map-marker"></div> Dream Destination</label>
+                <br>
+                <input type="text" placeholder="Zhangye Danxia, China">
+                <br>
+                <br>
+                <label><div class="glyphicon glyphicon-bullhorn"></div> Announcements</label>
+                <br>
+                <input type="text" placeholder="Announcement">
+                <br>
+                <input type="text" placeholder="Announcement">
+                <br>
+                <input type="text" placeholder="Announcement">
+                <br>
+                <br>
+                <label>Upload Photos</label>
+                <br>
+                <button type="button"><div class="glyphicon glyphicon-camera"></div> Upload Image</button>
+                <br>
+                <br>
+                <label>Immediate Family</label>
+                <br>
+                <input type="text" placeholder="Parents/Spouse">
+                <br>
+                <input type="text" placeholder="Parents/Spouse">
+                <br>
+                <input type="text" placeholder="Parents/Spouse">
+                <button>+</button>
+                <br>
+                <br>
+                <button class="submitBtn" type="submit">Submit</button>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</div>    
+
+</body>
+
+</html>
