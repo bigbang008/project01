@@ -7,6 +7,10 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
 
     <style>
         body {
@@ -32,10 +36,6 @@
             /* Full height */
             overflow: auto;
             /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
         }
 
         /* Modal Content */
@@ -46,6 +46,8 @@
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
+            margin-bottom: 100px;
+            background-color: #2D2D3F;
         }
 
         /* The Close Button */
@@ -62,6 +64,31 @@
             color: #000;
             text-decoration: none;
             cursor: pointer;
+        }
+
+        .modalGif {
+            height: 80px;
+            width: 80px;
+        }
+        #searchBtn{
+            margin-top: 10px;
+        }
+
+        #searchBtn, #gifsBtn, #moviesBtn{
+            background-color: #3f51b5 !important;
+            color: #F9F9F9 !important;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12) !important;
+            border: none;
+        }
+         .ajaxImages{
+            margin: 10px;
+            border: 1px solid #F9F9F9;
+            color: #2d2c41;
+            float: left;
+        }
+
+        #searchBar{
+            background-color: #F9F9F9;
         }
 
         /* .display-none{
@@ -88,13 +115,20 @@
             <span class="close">&times;</span>
             <button id="gifsBtn">Gifs</button>
             <button id="moviesBtn">Movies</button>
-            <div id="apiUIWrapper">
-                <input type="text" id="searchBar" placeholder="Search...">
-                <div id="apiContent"></div>
-                <button id="searchBtn">Search</button>
-                <button id="addBtn">Add</button>
+                        <div id="apiUIWrapper">
+                            <input type="text" id="searchBar" placeholder="Search...">
+                            <div id="apiContent"></div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                            <button id="searchBtn">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
 
         <script>
@@ -148,23 +182,20 @@
                         method: "GET"
                     }).then(function (response) {
                         $(".gif").empty();
-                        for (var i = 0; i < 10; i++){
-                            var gifDiv = $("<div class='gif'>").css('float','left');
+                        for (var i = 0; i < 10; i++) {
+                            var gifDiv = $("<div class='gif'>").css('float', 'left');
 
                             var gifImg = response.data[i].images.fixed_height.url;
-                        
-                            var gif = $("<img src="+gifImg+">");
-                        
+
+                            var gif = $("<img class='ajaxImages' src=" + gifImg + ">");
+
                             gifDiv.append(gif);
 
-                            console.log(gifDiv);
-                            console.log(gifImg);
-                            console.log(gif);
 
-                        
-                            $("#apiContent").append(gifDiv);
-                        console.log(response);
-                            }
+                            $("#apiContent").prepend(gifDiv);
+                            console.log(response);
+                        }
+
                     });
 
                 })
@@ -191,21 +222,20 @@
 
 
 
-                                 $(".mov").empty();
-                        for (var i = 0; i < 10; i++){
-                            var movDiv = $("<div class='mov'>").css('float','left');
+                        $(".mov").empty();
+                        for (var i = 0; i < 10; i++) {
+                            var movDiv = $("<div class='mov'>").css('float', 'left');
 
                             var movImg = response.Search[i].Poster;
-                        
-                            var mov = $("<img src="+movImg+">");
-                        
+
+                            var mov = $("<img class='ajaxImages' src=" + movImg + ">");
+
                             movDiv.append(mov);
 
-                        
-                            $("#apiContent").append(movDiv);
-                        console.log(response.Search[i].Poster);
 
-                        console.log(response);
+                            $("#apiContent").prepend(movDiv);
+
+                            console.log(response.Search[i].Poster);
 
                         }
                     });
