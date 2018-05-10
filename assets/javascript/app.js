@@ -1,3 +1,6 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+
 $(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
 $("#profile-img").click(function () {
@@ -82,14 +85,14 @@ $(function () {
 });
 
 //API Dropbox starts here
-$("#apiDrop").on("click",function(){  
+$("#myBtn").on("click",function(){  
 
 
    // Get the modal
 //    var modal = document.getElementById('myModal');
 
    // Get the button that opens the modal
-   var btn = document.getElementById('apiDrop')
+   var btn = document.getElementById('myBtn')
 
    // Get the <span> element that closes the modal
    var span = document.getElementsByClassName("close")[0];
@@ -197,3 +200,5 @@ $("#apiDrop").on("click",function(){
    })
 
 })
+
+});

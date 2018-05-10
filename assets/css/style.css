@@ -662,6 +662,9 @@ body {
   @media screen and (max-width: 735px) {
     #frame .content .message-input .wrap button {
       padding: 16px 0;
+      width: 534px;
+      
+
     }
   }
   #frame .content .message-input .wrap button:hover {
