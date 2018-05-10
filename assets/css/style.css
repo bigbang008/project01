@@ -1013,3 +1013,88 @@ a {
     right: 8px;
     z-index: 10;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+}
+
+/* Modal Content */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  margin-bottom: 100px;
+  background-color: #2D2D3F;
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalGif {
+  height: 80px;
+  width: 80px;
+}
+#searchBtn{
+  margin-top: 10px;
+}
+
+#searchBtn, #gifsBtn, #moviesBtn{
+  background-color: #3f51b5 !important;
+  color: #F9F9F9 !important;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12) !important;
+  border: none;
+}
+.ajaxImages{
+  margin: 10px;
+  border: 1px solid #F9F9F9;
+  color: #2d2c41;
+  float: left;
+}
+
+#searchBar{
+  background-color: #F9F9F9;
+}
+
+/* .display-none{
+display: none !important;
+}
+.display-inherit{
+display: inherit !important;
+} */

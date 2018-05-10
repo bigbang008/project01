@@ -80,3 +80,120 @@ $(function () {
 
 	var accordion = new Accordion($('#accordion'), false);
 });
+
+//API Dropbox starts here
+$("#apiDrop").on("click",function(){  
+
+
+   // Get the modal
+//    var modal = document.getElementById('myModal');
+
+   // Get the button that opens the modal
+   var btn = document.getElementById('apiDrop')
+
+   // Get the <span> element that closes the modal
+   var span = document.getElementsByClassName("close")[0];
+
+   // When the user clicks the button, open the modal 
+   btn.onclick = function () {
+	   modal.style.display = "block";
+   }
+
+   // When the user clicks on <span> (x), close the modal
+   span.onclick = function () {
+	   modal.style.display = "none";
+   }
+
+   // When the user clicks anywhere outside of the modal, close it
+   window.onclick = function (event) {
+	   if (event.target == modal) {
+		   modal.style.display = "none";
+	   }
+   }
+ 
+
+
+   $("#apiUIWrapper").css('display', 'none')
+   var title = 'Avengers'
+
+
+   $("#gifsBtn").on("click", function () {
+
+	   $("#gifsBtn").css('display', 'none')
+	   $("#moviesBtn").css('display', 'none')
+	   $("#apiUIWrapper").css('display', 'inherit')
+
+	   $("#searchBtn").on("click", function () {
+
+		   title = $("#searchBar").val().trim()
+
+		   var apiKey = '9RsoHb5hiRrXeoIELy3wuORx8T83KmFk';
+		   var giphyQueryURL = "https://api.giphy.com/v1/gifs/search?q=" + title + "&api_key=" + apiKey + "&limit=10";
+
+		   $.ajax({
+			   url: giphyQueryURL,
+			   method: "GET"
+		   }).then(function (response) {
+			   $(".gif").empty();
+			   for (var i = 0; i < 10; i++) {
+				   var gifDiv = $("<div class='gif'>").css('float', 'left');
+
+				   var gifImg = response.data[i].images.fixed_height.url;
+
+				   var gif = $("<img class='ajaxImages' src=" + gifImg + ">");
+
+				   gifDiv.append(gif);
+
+
+				   $("#apiContent").prepend(gifDiv);
+				   console.log(response);
+			   }
+
+		   });
+
+	   })
+
+
+   })
+   $("#moviesBtn").on("click", function () {
+
+	   $("#gifsBtn").css('display', 'none')
+	   $("#moviesBtn").css('display', 'none')
+	   $("#apiUIWrapper").css('display', 'inherit')
+
+	   $("#searchBtn").on("click", function () {
+
+		   title = $("#searchBar").val().trim()
+
+
+		   var omdbQueryURL = "https://www.omdbapi.com/?s=" + title + "&y=&plot=short&apikey=trilogy"
+
+		   $.ajax({
+			   url: omdbQueryURL,
+			   method: "GET"
+		   }).then(function (response) {
+
+
+
+			   $(".mov").empty();
+			   for (var i = 0; i < 10; i++) {
+				   var movDiv = $("<div class='mov'>").css('float', 'left');
+
+				   var movImg = response.Search[i].Poster;
+
+				   var mov = $("<img class='ajaxImages' src=" + movImg + ">");
+
+				   movDiv.append(mov);
+
+
+				   $("#apiContent").prepend(movDiv);
+
+				   console.log(response.Search[i].Poster);
+
+			   }
+		   });
+
+	   })
+   })
+
+})
