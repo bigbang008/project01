@@ -91,7 +91,7 @@ $("#gifsBtn").css('display', 'none')
 
 $("#myBtn").on("click",function(){
 
-	
+	$("#crazy").css('display','none')
 	$("#wrapper").css('display','inherit')
 	$("#gifsBtn").css('display', 'inherit')
 	$("#moviesBtn").css('display', 'inherit')

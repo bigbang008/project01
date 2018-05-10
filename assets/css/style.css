@@ -1109,3 +1109,7 @@ display: inherit !important;
   border: 1px solid #FFFFFF;
 
 }
+
+.modal-content{
+  width: 100% !important;
+}
