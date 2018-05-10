@@ -84,11 +84,21 @@ $(function () {
 	var accordion = new Accordion($('#accordion'), false);
 });
 
-//API Dropbox starts here
-$("#myBtn").on("click",function(){  
+$("#wrapper").css('display','none')
 
+$("#gifsBtn").css('display', 'none')
+	   $("#moviesBtn").css('display', 'none')
 
-   // Get the modal
+$("#myBtn").on("click",function(){
+
+	
+	$("#wrapper").css('display','inherit')
+	$("#gifsBtn").css('display', 'inherit')
+	$("#moviesBtn").css('display', 'inherit')
+
+})
+
+// Get the modal
 //    var modal = document.getElementById('myModal');
 
    // Get the button that opens the modal
@@ -198,7 +208,5 @@ $("#myBtn").on("click",function(){
 
 	   })
    })
-
-})
 
 });
