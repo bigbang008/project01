@@ -162,6 +162,14 @@ $("#myBtn").on("click",function(){
 				   console.log(response);
 			   }
 
+			$(".ajaxImages").on("click", function(){
+
+				$("#wrapper").css("display","none")
+				$("#crazy").css("display","inherit")
+
+			})
+
+
 		   });
 
 	   })
@@ -204,6 +212,14 @@ $("#myBtn").on("click",function(){
 				   console.log(response.Search[i].Poster);
 
 			   }
+
+			   $(".ajaxImages").on("click", function(){
+
+				$("#wrapper").css("display","none")
+				$("#crazy").css("display","inherit")
+
+			   })
+			   
 		   });
 
 	   })
