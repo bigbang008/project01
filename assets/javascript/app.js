@@ -313,6 +313,22 @@ $(document).ready(function () {
 
 				$(".ajaxImages").on("click", function () {
 
+					var msgGif = $(this).attr("src")
+
+					console.log(`==========================`);
+					console.log(msgGif);
+					console.log(`==========================`);
+
+					tempGif = msgGif;
+
+					// return msgGif
+
+					$("#newAjaxImage").attr("src", msgGif)
+
+
+
+					newAjaxMessage();
+
 					$("#wrapper").css("display", "none")
 					$("#crazy").css("display", "inherit")
 
