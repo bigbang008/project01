@@ -109,11 +109,13 @@ $(document).ready(function () {
 
 	$('.submit').click(function () {
 		newMessage();
+		$("#newAjaxImage").attr("src", '')
 	});
 
 	$(window).on('keydown', function (e) {
 		if (e.which == 13) {
 			newMessage();
+			$("#newAjaxImage").attr("src", '')
 			return false;
 		}
 	});
@@ -126,12 +128,14 @@ $(document).ready(function () {
 
 		$('.submit').click(function () {
 			newMessage();
+			
 		});
 
 		$(window).on('keydown', function (e) {
 			if (e.which == 13) {
 				newMessage();
 				return false;
+				
 			}
 		});
 	}

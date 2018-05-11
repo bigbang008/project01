@@ -1116,5 +1116,7 @@ display: inherit !important;
 }
 
 .goodCode{
-  
+  border-radius: 0 !important;
+  height: inherit !important;
+  width: inherit !important;
 }
