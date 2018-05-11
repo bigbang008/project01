@@ -7,30 +7,80 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ConnectUS Login Page</title>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
   <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  
   <!-- JQuery -->
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/signin-style.css">
   <script src="assets/javascript/signin-app.js"></script>
 </head>
 
 <body>
   <div class="page">
+    <div class="rightblock">
+        <div class="currentAccount">
+        <span class="currentEmail"></span>
+        <span><button type="button" id=loggingout>Log out</button>
+          </span>
+        </div>
+      </div>
     <div class="container">
       <div class="left">
         <div class="login">Login</div>
         <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
       </div>
-      <div class="right" id="signin-display">
+      <div class="right">
+        <div id="signin-display"></div>
         <div id="loader">Loading.....</div>
+        <div id="register-display">
+          <span>Don't have any account yet?</span>
+          <input type="submit" data-toggle="modal" id=registerButton value="Register">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Register Form  Modal-->
+  <div class="modal" id="myModal">
+        
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Register</h2>
+        </div>
+        <div class="modal-body">
+          <form>
+              <fieldset>
+                  <legend>Personal information:</legend>
+              
+                  <div class="form-group">
+                    <label><i class="far fa-envelope"></i> Email:</label>
+                    <input autocomplete="email" class="form-control" id="emailInput" placeholder="example@mail.com">
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-lock"></i> Password:
+                    <input type="password" class="form-control" id="passwordInput" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-lock"></i> Confirm Password:
+                    <input type="password" class="form-control" id="confirmPasswordInput" placeholder="">
+                  </div>
+                  <div class="cautionMsg"></div>
+                </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-submit">Submit</button> 
+          <!-- onclick="document.location.href='create_account.html';" -->
+        </div>
       </div>
     </div>
   </div>
 
 </body>
+
 
 </html>
