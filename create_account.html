@@ -21,7 +21,7 @@
         crossorigin="anonymous"></script>
     <!-- Moment -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- Firebase -->
+
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <!-- My JS -->
     <script src="assets/javascript/create_account.js"></script>
@@ -37,8 +37,10 @@
                 <div class="col-sm-4 profileCreator">
                     <img src="assets/media/profile_placeholder.png" alt="" class="profilePlaceholderImage">
                     <br>
+                    <input type="file" id="files" name="files[]" multiple />
+                    <output id="list"></output>
                     <br>
-                    <button id="uploadProfilePic"type="button" class="animated flip">
+                    <button id="uploadProfilePic" type="button" class="animated flip">
                         <div class="glyphicon glyphicon-camera"></div> Upload Image</button>
                     <label>Upload A Profile Picture</label>
                     <br>
@@ -119,8 +121,10 @@
                     <button id="addMember" class="animated fadeInUpBig">+</button>
                     <br>
                     <br>
-                    <button class="submitBtn animated lightSpeedIn" id="submitInfo" type="submit">
+                    <button class="submitBtn animated lightSpeedIn" id="submitInfo" type="submit"> 
+                        <!-- //onclick="document.location.href='index.html';" -->
                         <div class="glyphicon glyphicon-ok"></div> Submit</button>
+                        
                 </div>
                 <div class="col-sm-4"></div>
             </div>

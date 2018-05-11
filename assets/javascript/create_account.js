@@ -11,9 +11,73 @@ $(document).ready(function () {
   firebase.initializeApp(config);
 
     // Get a reference to the database service
+    var auth = firebase.auth()
     var accountDataBase = firebase.database();
     var storage = firebase.storage();
     var storageRef = storage.ref();
+    var uid;
+    var imgURL;
+
+   
+
+//Adds an observer for changes to the user's sign-in state.
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var user = firebase.auth().currentUser;
+    if (user != null) {
+      uid = user.uid;
+      var email_id = user.email;
+
+      console.log("uid" + uid);
+      console.log("email" +email_id);
+    }
+
+  } else {
+    // redirect to login page
+    uid = null;
+    window.location.replace("signin.html");
+  }
+});
+
+//upload picture porfile
+function handleFileSelect(evt) {
+  var files = evt.target.files; // FileList object
+
+  // Loop through the FileList and render image files as thumbnails.
+  for (var i = 0, f; f = files[i]; i++) {
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      continue;
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
+        // Render thumbnail.
+        var picSource = $(".profilePlaceholderImage");
+        picSource.attr("src", " ");
+        picSource.attr("src", e.target.result);
+        picSource.attr("alt", escape(theFile.name));
+      };
+    })(f);
+
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
+  }
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+//on click upload picture
+$("#uploadProfilePic").on("click", function(){
+  event.preventDefault();
+  var newSrc = $(".profilePlaceholderImage").attr('src');
+})
 
     //on click function to capture the value in the form 
     $(".profileCreator").on("click", "#submitInfo", function(){
@@ -50,11 +114,13 @@ $(document).ready(function () {
             thirdAnnoucement: thirdAnnoucement,
             member1: member1,
             member2: member2,
-            member3: member3
+            member3: member3,
+            image: $(".profilePlaceholderImage").attr('src'),
+            uid: uid
         };
 
         //upload newAccount to the database
-        accountDataBase.ref('users/' + userId).push(newAccount);
+        accountDataBase.ref().push(newAccount);
 
         // Logs everything to console
         console.log("Name:" + newAccount.firstName + " " + newAccount.lastName);
@@ -64,7 +130,8 @@ $(document).ready(function () {
         console.log("favFood:" + newAccount.favFood);
         console.log("annoucement:" + newAccount.firstAnnoucement + "/" +newAccount.secondAnnoucement +"/" + newAccount.thirdAnnoucement);
         console.log("Members:" + newAccount.member1 + "/" + newAccount.member2 + "/" + newAccount.member3);
-        return false;
+
+        document.location.href='index.html';
     });
 
 
@@ -73,6 +140,8 @@ $(document).ready(function () {
         // for (var i = 0, i)
         
     })
+
+    
 
 
 });

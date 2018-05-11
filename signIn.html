@@ -17,28 +17,36 @@
 </head>
 
 <body>
+
+
   <div class="page">
-    <div class="rightblock">
-        <div class="currentAccount">
-        <span class="currentEmail"></span>
-        <span><button type="button" id=loggingout>Log out</button>
-          </span>
-        </div>
-      </div>
     <div class="container">
       <div class="left">
         <div class="login">Login</div>
         <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
       </div>
       <div class="right">
-        <div id="signin-display"></div>
-        <div id="loader">Loading.....</div>
-        <div id="register-display">
-          <span>Don't have any account yet?</span>
-          <input type="submit" data-toggle="modal" id=registerButton value="Register">
+        <!-- no user log in -->
+        <div class="noUser"> 
+          <div id="signin-display"></div>
+          <div id="loader">Loading.....</div>
+          <div id="register-display">
+            <span>Don't have any account yet?</span>
+            <input type="submit" data-toggle="modal" id=registerButton value="Register">
+          </div>
+        </div>
+        <!-- user is sigining in -->
+        <div class="haveUser">
+            <div class="currentAccount">
+            <p><i class="fas fa-sign-in-alt"></i>Current Login:</p>
+            <p class="currentEmail"></p>
+            <button type="button" id=loggingout>Log out</button>
+            </div>
+        </div>
       </div>
     </div>
   </div>
+
   
   <!-- Register Form  Modal-->
   <div class="modal" id="myModal">

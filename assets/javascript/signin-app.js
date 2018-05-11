@@ -153,9 +153,6 @@ $("#loggingout").on("click", function(){
 });
 
 
-
-
-var success ="You have been successfully registered";
 //Adds an observer for changes to the user's sign-in state.
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -163,9 +160,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     var user = firebase.auth().currentUser;
       if (user != null) {
         var email_id = user.email;
+        var success ="You have been successfully registered";
         $(".cautionMsg").append(success).css({"color":"green", "font-size":"20px"});
-        $(".currentEmail").text("Current login:" + email_id);
-        $("#loggingout").css("display", "block");
+        $(".currentEmail").text(email_id);
+        $(".noUser").css("display", "none");
+        $(".haveUser").css("display", "block");
+
       }
   } 
 });

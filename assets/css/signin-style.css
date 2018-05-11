@@ -1,29 +1,4 @@
 
-.currentAccount {
-  color: green;
-  font-style: italic;
-}
-
-.rightblock {
-  float: right !important;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-#loggingout {
-  display: none;
-  width:80px;
-  height: fit-content;
-  /* float: right; */
-  font-size: 15px;
-  margin: 0 auto;
-}
-
-#loggingout:active {
-  background-color: yellow;
-}
-
 button{
   margin-top: 35px !important;
 }
@@ -239,4 +214,28 @@ input{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* logging in */
+.noUser {
+  display: block;
+}
+.haveUser {
+  display: none;
+ 
+}
+.currentAccount {
+  color: green;
+  font-style: italic;
+  padding: 20px;
+}
+
+#loggingout {
+  width:80px;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+#loggingout:active {
+  background-color: yellow;
 }
