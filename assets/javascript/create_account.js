@@ -59,6 +59,7 @@ function handleFileSelect(evt) {
     reader.onload = (function(theFile) {
       return function(e) {
         // Render thumbnail.
+        var picSource = $(".profilePlaceholderImage");
         picSource.attr("src", " ");
         picSource.attr("src", e.target.result);
         picSource.attr("alt", escape(theFile.name));
