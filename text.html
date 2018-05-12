@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Firebase Chat</title>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  
-  <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-<!-- Firechat -->
-<link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css">
-<script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
-  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!-- Firechat -->
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css">
+  <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
+
 </head>
+
 <body>
   <div id="firechat-wrapper"></div>
 </body>
 <script>
   var config = {
-  apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
-  authDomain: "testww-f058a.firebaseapp.com",
-  databaseURL: "https://testww-f058a.firebaseio.com",
-  projectId: "testww-f058a",
-  storageBucket: "testww-f058a.appspot.com",
-  messagingSenderId: "825428332993"
-};
+    apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
+    authDomain: "testww-f058a.firebaseapp.com",
+    databaseURL: "https://testww-f058a.firebaseio.com",
+    projectId: "testww-f058a",
+    storageBucket: "testww-f058a.appspot.com",
+    messagingSenderId: "825428332993"
+  };
 
-firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
-  firebase.auth().onAuthStateChanged(function(user) {
-  // Once authenticated, instantiate Firechat with the logged in user
-  if (user) {
-    initChat(user);
-  }
-});
+  firebase.auth().onAuthStateChanged(function (user) {
+    // Once authenticated, instantiate Firechat with the logged in user
+    if (user) {
+      initChat(user);
+    }
+  });
 
 
   function initChat(user) {
@@ -53,6 +55,8 @@ firebase.initializeApp(config);
 
 
 </script>
-</html>
-To use Firebase in your web application you need to load the Firebase library. Add this line within the <head> section:
 
+</html>
+To use Firebase in your web application you need to load the Firebase library. Add this line within the
+
+<head> section:
