@@ -36,7 +36,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
     // redirect to login page
-    uid = null;
     window.location.replace("signin.html");
   }
 });
@@ -72,6 +71,11 @@ function handleFileSelect(evt) {
 
     console.log(reader);
 
+    console.log(reader.result)
+    // var pic = reader.result;
+    // ref.putString(pic, 'data_url').then(function(snapshot) {
+    //   console.log('Uploaded a data_url string!');
+    // });
   }
 }
 
@@ -122,7 +126,7 @@ $("#uploadProfilePic").change(function(){
             member1: member1,
             member2: member2,
             member3: member3,
-            image: $(".profilePlaceholderImage").attr('src', $(this)),
+            // image: $(".profilePlaceholderImage").attr('src', $(this)),
             uid: uid
         };
 

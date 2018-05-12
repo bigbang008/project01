@@ -47,7 +47,7 @@ var uiConfig = {
   queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: 'create_account.html',
+  signInSuccessUrl: 'index.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
@@ -140,7 +140,7 @@ $(".btn-submit").on("click", function(){
     console.log(error);
   });
 
-  document.location.href='create_account.html';
+  // document.location.href='create_account.html';
 
 });
 
@@ -148,6 +148,11 @@ $(".btn-submit").on("click", function(){
 $("#profileInfo").on("click", function(){
   document.location.href='index.html';
 });
+
+$("#profileUpdate").on("click", function(){
+  document.location.href='create_account.html';
+});
+
 
 //sign out
 $("#loggingout").on("click", function(){

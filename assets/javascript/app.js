@@ -388,11 +388,16 @@ $(document).ready(function () {
 		$(".a2").text(secondAnnoucement);
 		$(".a3").text(thirdAnnoucement);
 
-
-
-
-
 	});
 
-
+	//sign out
+	$("#loggingout").on("click", function(){
+		firebase.auth().signOut().then(function() {
+		// Sign-out successful.
+		window.location.replace("signin.html");
+		}).catch(function(error) {
+		// An error happened.
+		});
+	});
+  
 });

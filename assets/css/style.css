@@ -1120,3 +1120,7 @@ display: inherit !important;
   height: inherit !important;
   width: inherit !important;
 }
+
+#loggingout {
+  color: black;
+}
