@@ -378,17 +378,26 @@ $(document).ready(function () {
 		var member1 = sv.member1;
 		var member2 = sv.member2;
 		var member3 = sv.member3;
+		var fullname = firstName+ " " + lastName
 
-		$(".username-display").text(firstName+" "+lastName);
-		$(".dob").text(birthMonth+"/"+birthDay+"/"+birthYear);
+		$(".username-display").text(firstName);
+		$(".lastname").text(lastName);
+		$(".dob").text(birthMonth + "/" + birthDay +"/"+ birthYear);
 		$(".cityName").text(city);
 		$(".foodName").text(favFood);
 		$(".destinationName").text(dreamDestination);
 		$(".a1").text(firstAnnoucement);
 		$(".a2").text(secondAnnoucement);
 		$(".a3").text(thirdAnnoucement);
+		console.log(firstName);
 
+		
 	});
+
+// 	var userId = uid;
+// firebase.database().ref('/users/' + userId).on('value').then(function(data) {
+// 	console.log(data.value);
+// });
 
 	//sign out
 	$("#loggingout").on("click", function(){

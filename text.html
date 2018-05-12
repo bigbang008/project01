@@ -4,29 +4,55 @@
   <meta charset="UTF-8">
   <title>Firebase Chat</title>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<!-- Firechat -->
+<link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css">
+<script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
   
 </head>
 <body>
-  <input id="username" type="text" placeholder="Name"><br/>
-  <input id="text" type="text" placeholder="Message"><br/>
-  <button id="post">Post</button><br/>
-  <div id="results"></div>
-  <script>
-    var myFirebase = new Firebase('https://testww-f058a.firebaseio.com');
-    var usernameInput = document.querySelector('#username');
-    var textInput = document.querySelector('#text');
-    var postButton = document.querySelector('#post');
-
-    postButton.addEventListener("click", function() {
-      var msgUser = usernameInput.value;
-      var msgText = textInput.value;
-      myFirebase.set(msgUser + " says: " + msgText);
-      textInput.value = "";
-    });
-</script>
-  </script>
+  <div id="firechat-wrapper"></div>
 </body>
+<script>
+  var config = {
+  apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
+  authDomain: "testww-f058a.firebaseapp.com",
+  databaseURL: "https://testww-f058a.firebaseio.com",
+  projectId: "testww-f058a",
+  storageBucket: "testww-f058a.appspot.com",
+  messagingSenderId: "825428332993"
+};
+
+firebase.initializeApp(config);
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  // Once authenticated, instantiate Firechat with the logged in user
+  if (user) {
+    initChat(user);
+  }
+});
+
+
+  function initChat(user) {
+    // Get a Firebase Database ref
+    var chatRef = firebase.database().ref("chat");
+
+    // Create a Firechat instance
+    var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
+
+    // Set the Firechat user
+    chat.setUser(user.uid, user.displayName);
+  }
+</script>
+
+
+
+</script>
 </html>
 To use Firebase in your web application you need to load the Firebase library. Add this line within the <head> section:
 
