@@ -382,7 +382,7 @@ $(document).ready(function () {
 
 		$(".username-display").text(firstName);
 		$(".lastname").text(lastName);
-		$(".dob").text(birthMonth + "/" + birthDay +"/"+ birthYear);
+		$(".dob").text(birthMonth+ birthDay+ birthYear);
 		$(".cityName").text(city);
 		$(".foodName").text(favFood);
 		$(".destinationName").text(dreamDestination);
