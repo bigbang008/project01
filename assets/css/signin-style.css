@@ -230,7 +230,8 @@ input{
   padding: 20px;
 }
 
-#loggingout {
+#loggingout
+#profileInfo {
   width:80px;
   font-size: 15px;
   margin: 0 auto;

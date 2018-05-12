@@ -140,6 +140,13 @@ $(".btn-submit").on("click", function(){
     console.log(error);
   });
 
+  document.location.href='create_account.html';
+
+});
+
+// link to index html
+$("#profileInfo").on("click", function(){
+  document.location.href='index.html';
 });
 
 //sign out
