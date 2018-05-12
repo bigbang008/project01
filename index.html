@@ -22,7 +22,7 @@
         color="#111" />
     <link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
@@ -40,7 +40,7 @@
                         <div id="profile">
                             <div class="wrap">
                                 <img id="profile-img" src="assets/media/male_headshot.jpg" class="online" alt="" />
-                                <p>John Smith</p>
+                                <p class="username-display">John Smith</p>
                                 <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
                                 <div id="status-options">
                                     <ul>
@@ -276,8 +276,8 @@
                                 <a href="https://plus.google.com/u/0/105032594920038016998" target="_blank" class="fa fa-google"></a>
                             </div>
                             <div class="username">
-                                <h2>Johnny Smith
-                                    <small>
+                                <h2 class="username-display">Johnny Smith
+                                    <small class="currentLocation">
                                         <i class="fa fa-map-marker"></i> Basement (Yours)</small>
                                 </h2>
                                 <p>
@@ -332,16 +332,16 @@
                         <ul class="submenu">
                             <li>
                                 <a>
-                                    <i class="left-none"></i>Birthday : 03/09/1994</a>
+                                    <i class="left-none"></i>Birthday : <span class="dob">03/09/1994</span></a>
                             </li>
                             <li>
-                                <a>Current City: Chicago</a>
+                                <a>Current City: <span class="cityName">Chicago</span></a>
                             </li>
                             <li>
-                                <a>Favorite Food: Alcohol</a>
+                                <a>Favorite Food: <span class="foodName">Alcohol</span></a>
                             </li>
                             <li>
-                                <a>Dream Destination: Amsterdam</a>
+                                <a>Dream Destination: <span class="destinationName">Amsterdam</span></a>
                             </li>
                         </ul>
                     </li>
@@ -352,10 +352,15 @@
                         </div>
                         <ul class="submenu">
                             <li>
-                                <a href="#">
-                                    New High Score In Fortnite
+                                <a class="a1">New High Score In Fortnite</a>
                             </li>
-                            </a>
+                            <li>
+                                <a class="a2">New High Score In Fortnite</a>
+                            </li>
+                            <li>
+                                <a class="a3">New High Score In Fortnite</a>
+                            </li>
+                        
                         </ul>
                     </li>
                     <li>

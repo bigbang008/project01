@@ -59,25 +59,31 @@ function handleFileSelect(evt) {
     reader.onload = (function(theFile) {
       return function(e) {
         // Render thumbnail.
-        var picSource = $(".profilePlaceholderImage");
         picSource.attr("src", " ");
         picSource.attr("src", e.target.result);
         picSource.attr("alt", escape(theFile.name));
+        
       };
     })(f);
 
     // Read in the image file as a data URL.
     reader.readAsDataURL(f);
+
+    console.log(reader);
+
   }
 }
 
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
+$("#uploadProfilePic").change(function(){
+  
+});
 //on click upload picture
-$("#uploadProfilePic").on("click", function(){
-  event.preventDefault();
-  var newSrc = $(".profilePlaceholderImage").attr('src');
-})
+// $("#uploadProfilePic").on("click", function(){
+//   event.preventDefault();
+//   var newSrc = $(".profilePlaceholderImage").attr('src');
+// })
 
     //on click function to capture the value in the form 
     $(".profileCreator").on("click", "#submitInfo", function(){
@@ -115,7 +121,7 @@ $("#uploadProfilePic").on("click", function(){
             member1: member1,
             member2: member2,
             member3: member3,
-            image: $(".profilePlaceholderImage").attr('src'),
+            image: $(".profilePlaceholderImage").attr('src', $(this)),
             uid: uid
         };
 

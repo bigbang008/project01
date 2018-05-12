@@ -1,6 +1,17 @@
 $(document).ready(function () {
 	console.log("ready!");
 
+	var config = {
+		apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
+		authDomain: "testww-f058a.firebaseapp.com",
+		databaseURL: "https://testww-f058a.firebaseio.com",
+		projectId: "testww-f058a",
+		storageBucket: "testww-f058a.appspot.com",
+		messagingSenderId: "825428332993"
+	};
+	firebase.initializeApp(config);
+
+
 	var tempGif;
 
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
@@ -109,13 +120,11 @@ $(document).ready(function () {
 
 	$('.submit').click(function () {
 		newMessage();
-		$("#newAjaxImage").attr("src", '')
 	});
 
 	$(window).on('keydown', function (e) {
 		if (e.which == 13) {
 			newMessage();
-			$("#newAjaxImage").attr("src", '')
 			return false;
 		}
 	});
@@ -128,14 +137,12 @@ $(document).ready(function () {
 
 		$('.submit').click(function () {
 			newMessage();
-			
 		});
 
 		$(window).on('keydown', function (e) {
 			if (e.which == 13) {
 				newMessage();
 				return false;
-				
 			}
 		});
 	}
@@ -313,22 +320,6 @@ $(document).ready(function () {
 
 				$(".ajaxImages").on("click", function () {
 
-					var msgGif = $(this).attr("src")
-
-					console.log(`==========================`);
-					console.log(msgGif);
-					console.log(`==========================`);
-
-					tempGif = msgGif;
-
-					// return msgGif
-
-					$("#newAjaxImage").attr("src", msgGif)
-
-
-
-					newAjaxMessage();
-
 					$("#wrapper").css("display", "none")
 					$("#crazy").css("display", "inherit")
 
@@ -338,5 +329,70 @@ $(document).ready(function () {
 
 		})
 	})
+
+
+	//current stage 
+	
+	var uid;
+
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+		  // User is signed in.
+		  var user = firebase.auth().currentUser;
+		  if (user != null) {
+			uid = user.uid;
+			var email_id = user.email;
+	  
+			console.log("uid" + uid);
+			console.log("email" +email_id);
+		  }
+	  
+		} else {
+		  // redirect to login page
+		  uid = null;
+		  window.location.replace("signin.html");
+		}
+	  });
+	  
+	
+	  // pulling data
+	var ref = firebase.database().ref();
+
+	ref.on("child_added", function(snapshot) {
+		console.log(snapshot.val());
+
+		var sv = snapshot.val();
+
+		var firstName = sv.firstName;
+		var lastName = sv.lastName;
+		var profession =sv.profession;
+		var birthMonth = sv.birthMonth;
+		var birthDay = sv.birthDay;
+		var birthYear = sv.birthYear;
+		var city = sv.city;
+		var favFood = sv.favFood;
+		var dreamDestination = sv.dreamDestination;
+		var firstAnnoucement = sv.firstAnnoucement
+		var secondAnnoucement = sv.secondAnnoucement;
+		var thirdAnnoucement = sv.thirdAnnoucement;
+		var member1 = sv.member1;
+		var member2 = sv.member2;
+		var member3 = sv.member3;
+
+		$(".username-display").text(firstName+" "+lastName);
+		$(".dob").text(birthMonth+"/"+birthDay+"/"+birthYear);
+		$(".cityName").text(city);
+		$(".foodName").text(favFood);
+		$(".destinationName").text(dreamDestination);
+		$(".a1").text(firstAnnoucement);
+		$(".a2").text(secondAnnoucement);
+		$(".a3").text(thirdAnnoucement);
+
+
+
+
+
+	});
+
 
 });
