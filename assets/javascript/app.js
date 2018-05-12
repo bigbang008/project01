@@ -1,15 +1,15 @@
 $(document).ready(function () {
 	console.log("ready!");
 
-	var config = {
-		apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
-		authDomain: "testww-f058a.firebaseapp.com",
-		databaseURL: "https://testww-f058a.firebaseio.com",
-		projectId: "testww-f058a",
-		storageBucket: "testww-f058a.appspot.com",
-		messagingSenderId: "825428332993"
-	};
-	firebase.initializeApp(config);
+	// var config = {
+	// 	apiKey: "AIzaSyDG0DZ5sc2W0SEhIxCKmYnqDON0-Ockgtc",
+	// 	authDomain: "testww-f058a.firebaseapp.com",
+	// 	databaseURL: "https://testww-f058a.firebaseio.com",
+	// 	projectId: "testww-f058a",
+	// 	storageBucket: "testww-f058a.appspot.com",
+	// 	messagingSenderId: "825428332993"
+	// };
+	// firebase.initializeApp(config);
 
 
 	var tempGif;
