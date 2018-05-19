@@ -1,3 +1,10 @@
 # project01
 
 Link to deployed version: https://bigbang008.github.io/project01/
+
+
+Problem: Create a project that uses two API's, Ajax to pull data, a new library/technology, had a polished UI, met good quality coding standards, did not use alerts or prompts, had a repeating element, used Bootstrap, was deployed, and had User Input Validation and used a Firebase database. 
+
+Solution: For our API's we chose to use the Giphy and OMDB API's. We chose these because we believe they have an entertainment value that would work well with our users. To pull the JSON response from these API's we used a jQuery variant of Ajax calls in our javascript files. The new libraries we chose to use were Animate.CSS which can be seen in the animated buttons on our create_account.html page and Anime.JS which can be seen in our Login.html page. For a polished UI we chose to base the mass of our UI off two open source bootsnip projects that we were able to combine for a great look. We then opted to change the vast majority of both of these UI's to fit our goals, while simpultaniously keeping the aspects of the UI that inherantly drew us to them. Our repeating element and our use of Bootstrap also very much ties into our UI as we used columns as a repeating elemen throughout as well as used Bootstrap to construct the UI on each of our pages. For user input validation we used some tehcnologies from Firebase that allowed users who were visiting the site for the first time to create an account with either their Facebook, Twitter, or Email account. We were also able to have the create_account page save the values of the user's profile within our Firebase database and then output them in our main page as a profile. Firebase was one of the most valuable tools we used, and it can be seen throughout our code.  
+
+Technical Approach: Using the education we have garnered from Northwestern University's Full Stack Web Development program, and more specifically with HTML5,Bootstrap,CSS3, Javascript ES5/ES6, jQuery, Firebase, The Giphy & OMDB API's, Animate.CSS & Anime.JS we were able to complete a very quality project.
